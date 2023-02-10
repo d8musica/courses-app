@@ -4,7 +4,11 @@
         "browser": true,
         "es2021": true
     },
-    "extends": ["react-app", "prettier"],
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:prettier/recommended"
+    ],
     "parserOptions": {
         "ecmaFeatures": {
             "jsx": true
@@ -18,7 +22,8 @@
     ],
     "rules": {
         "prettier/prettier": [
-            "error", {
+            "error",
+            {
                 "printWidth": 80,
                 "trailingComma": "es5",
                 "semi": true,
@@ -26,18 +31,23 @@
                 "singleQuote": true,
                 "useTabs": true,
                 "endOfLine": "auto",
-                "max-len": ["error", { "code": 80 }],
+                "max-len": [
+                    "error",
+                    {
+                        "code": 80
+                    }
+                ],
                 "importOrder": [
-                  "^react(.*)$",
-                  "<THIRD_PARTY_MODULES>",
-                  "./types",
-                  "^[.](?!.*.(scss|css)$).*$",
-                  "(.*).(scss|css)$"
+                    "^react(.*)$",
+                    "<THIRD_PARTY_MODULES>",
+                    "./types",
+                    "^[.](?!.*.(scss|css)$).*$",
+                    "(.*).(scss|css)$"
                 ],
                 "importOrderSeparation": true,
                 "importOrderSortSpecifiers": true
             }
         ],
-      "no-duplicate-imports": "error"
+        "no-duplicate-imports": "error"
     }
 }
